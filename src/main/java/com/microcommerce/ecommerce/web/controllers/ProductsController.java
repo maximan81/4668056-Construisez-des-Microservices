@@ -91,4 +91,9 @@ public class ProductsController {
         }
         return productMargeList;
     }
+
+    @GetMapping("/products/orderByNameAsc")
+    public List<Product> trierProduitsParOrdreAlphabetique () {
+        return productsDao.findAllByOrderByNameAsc();
+    }
 }
